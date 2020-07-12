@@ -18,6 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PATH_TO_GIT" value="D:\Program Files\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eXO0ktEaEfWFIIBQ5RmvNsRGhH" />
@@ -40,7 +41,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -95,7 +96,7 @@
       <updated>1594464249781</updated>
       <workItem from="1594464256646" duration="2098000" />
       <workItem from="1594521280176" duration="6230000" />
-      <workItem from="1594527652290" duration="788000" />
+      <workItem from="1594527652290" duration="3234000" />
     </task>
     <servers />
   </component>
@@ -111,6 +112,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1073" y="416" key="#com.intellij.ide.util.MemberChooser/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594527373213" />
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1594531073701">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="455" key="FileChooserDialogImpl/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594531073701" />
+    <state x="1089" y="596" key="Github.CreateGistDialog" timestamp="1594530928736">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1089" y="596" key="Github.CreateGistDialog/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594530928736" />
+    <state x="1143" y="590" key="Github.ShareDialog" timestamp="1594530855418">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1143" y="590" key="Github.ShareDialog/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594530855418" />
     <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1594526481543">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -143,10 +156,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.1.right/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594526481544" />
-    <state x="781" y="342" key="SettingsEditor" timestamp="1594527632600">
+    <state x="781" y="342" key="SettingsEditor" timestamp="1594531444742">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="781" y="342" key="SettingsEditor/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594527632600" />
+    <state x="781" y="342" key="SettingsEditor/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594531444742" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1594531387876">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1594531387876" />
     <state x="1051" y="418" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594522681079">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

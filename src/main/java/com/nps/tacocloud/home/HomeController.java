@@ -17,6 +17,6 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.POST, name = "/test")
     public String getStr(){
-        return "this is    test  ";
+        return "this is  test";
     }
 }

@@ -1,4 +1,4 @@
-package com.nps.tacocloud.home;
+package com.nps.tacocloud.controller.home;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

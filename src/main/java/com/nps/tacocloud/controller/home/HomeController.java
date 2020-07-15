@@ -1,16 +1,14 @@
-package com.nps.tacocloud.home;
+package com.nps.tacocloud.controller.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.xml.transform.Result;
-
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String getHome(){
         return "home";
     }

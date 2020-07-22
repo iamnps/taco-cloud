@@ -2,6 +2,7 @@ package com.nps.tacocloud.data;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -14,6 +15,7 @@ import java.util.List;
  */
 
 @Data
+@Entity
 public class Order {
 
 

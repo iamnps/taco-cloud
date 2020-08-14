@@ -2,10 +2,11 @@ package com.nps.tacocloud.data;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,10 +17,15 @@ import java.util.List;
 
 @Data
 @Entity
-public class Order {
+@Table(name = "Taco_order")
+public class Order implements Serializable{
 
+    private static final long serialVersionuID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private Date placedAt;
 
     @NotBlank(message = "Name is required")
@@ -39,10 +45,19 @@ public class Order {
     @Digits(integer = 3, fraction = 0, message = "Invalid CVV")
     private String ccCvv;
 
+    @ManyToMany(targetEntity = Taco.class)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addDesign(Taco taco){
         this.tacos.add(taco);
     }
+
+    @PrePersist
+    void placedAt(){
+        this.placedAt = new Date();
+    }
+
+    @ManyToOne
+    private User user;
 
 }

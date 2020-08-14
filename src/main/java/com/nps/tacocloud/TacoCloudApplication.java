@@ -15,6 +15,7 @@ public class TacoCloudApplication implements WebMvcConfigurer{
     @Override
     public void addViewControllers(ViewControllerRegistry viewControllerRegistry){
         viewControllerRegistry.addViewController("/").setViewName("home");
+        viewControllerRegistry.addViewController("/login");
     }
 
 }

@@ -10,6 +10,9 @@
 <!--<img th:src="@{/images/welcome.jpg}">-->
 <form method="POST" th:object="${design}">
     <div class="grid">
+        <form method="post" th:action="@{/login}">
+            <input type="submit" value="Logout" />
+        </form>
         <div class="ingredient-group" id="wraps">
             <h3>Designate your wraps</h3>
             <div th:each="ingredient : ${wrap}">

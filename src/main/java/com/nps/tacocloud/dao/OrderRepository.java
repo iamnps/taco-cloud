@@ -1,8 +1,11 @@
 package com.nps.tacocloud.dao;
 
 import com.nps.tacocloud.data.Order;
-import org.springframework.data.repository.CrudRepository;
+import com.nps.tacocloud.data.User;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Created by peishen.nie on 2020/7/15.

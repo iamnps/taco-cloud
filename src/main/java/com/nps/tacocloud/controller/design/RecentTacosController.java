@@ -7,5 +7,4 @@ package com.nps.tacocloud.controller.design;
 public class RecentTacosController {
 
     private int a = 1;
-    private int b = 2;
 }

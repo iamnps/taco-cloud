@@ -60,9 +60,8 @@
             <artifactId>spring-boot-starter-hateoas</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -94,11 +93,6 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>7.0.1.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zwxpay.boot</groupId>
-            <artifactId>boot-service</artifactId>
-            <version>1.0</version>
         </dependency>
     </dependencies>
 

@@ -20,5 +20,9 @@ public class OrderProps {
 
     @Max(value = 25, message = "must be between 5 and 25")
     @Min(value = 5, message = "must be between 5 and 25")
-    private int pageSize = 20;
+    public int pageSize = 20;
+
+    public int getPageSize() {
+        return 0;
+    }
 }

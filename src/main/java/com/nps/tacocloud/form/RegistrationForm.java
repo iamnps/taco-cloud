@@ -1,14 +1,12 @@
 package com.nps.tacocloud.form;
 
 import com.nps.tacocloud.data.User;
-import lombok.Data;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * Created by peishen.nie on 2020/7/24.
  */
 
-@Data
 public class RegistrationForm {
 
     private String username;

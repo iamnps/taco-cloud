@@ -1,7 +1,5 @@
 package com.nps.tacocloud.data;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -15,7 +13,7 @@ import java.util.List;
  * Created by peishen.nie on 2020/7/14.
  */
 
-@Data
+
 @Entity
 @Table(name = "Taco_order")
 public class Order implements Serializable{
@@ -59,5 +57,107 @@ public class Order implements Serializable{
 
     @ManyToOne
     private User user;
+
+    public static long getSerialversionuid() {
+        return serialVersionuID;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Date getPlacedAt() {
+        return placedAt;
+    }
+
+    public void setPlacedAt(Date placedAt) {
+        this.placedAt = placedAt;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public String getCcNumber() {
+        return ccNumber;
+    }
+
+    public void setCcNumber(String ccNumber) {
+        this.ccNumber = ccNumber;
+    }
+
+    public String getCcExpiration() {
+        return ccExpiration;
+    }
+
+    public void setCcExpiration(String ccExpiration) {
+        this.ccExpiration = ccExpiration;
+    }
+
+    public String getCcCvv() {
+        return ccCvv;
+    }
+
+    public void setCcCvv(String ccCvv) {
+        this.ccCvv = ccCvv;
+    }
+
+    public List<Taco> getTacos() {
+        return tacos;
+    }
+
+    public void setTacos(List<Taco> tacos) {
+        this.tacos = tacos;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
 
 }

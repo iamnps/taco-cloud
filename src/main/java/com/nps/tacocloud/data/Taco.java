@@ -1,7 +1,5 @@
 package com.nps.tacocloud.data;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -14,8 +12,6 @@ import java.util.List;
  * Created by peishen.nie on 2020/7/13.
  */
 
-@Data
-@NoArgsConstructor
 @Entity
 public class Taco {
 
@@ -38,4 +34,38 @@ public class Taco {
     @ManyToMany(targetEntity = Ingredient.class)
     @Size(min = 1, message = "You must choose at least 1 ingredient")
     private List<String> ingredients;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getCrtAt() {
+        return crtAt;
+    }
+
+    public void setCrtAt(Date crtAt) {
+        this.crtAt = crtAt;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+
 }

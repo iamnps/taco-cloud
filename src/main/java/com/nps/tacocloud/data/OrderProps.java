@@ -1,9 +1,5 @@
 package com.nps.tacocloud.data;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -16,8 +12,6 @@ import javax.validation.constraints.Min;
 
 @Component
 // @ConfigurationProperties(prefix = "taco.orders")
-@Data
-@NoArgsConstructor
 @Validated
 public class OrderProps {
 
@@ -28,4 +22,10 @@ public class OrderProps {
     public int getPageSize() {
         return 0;
     }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    
 }

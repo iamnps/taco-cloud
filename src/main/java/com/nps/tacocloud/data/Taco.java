@@ -1,6 +1,7 @@
 package com.nps.tacocloud.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ import java.util.List;
  */
 
 @Data
+@NoArgsConstructor
 @Entity
 public class Taco {
 

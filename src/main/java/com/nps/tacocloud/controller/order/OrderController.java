@@ -58,12 +58,14 @@ public class OrderController {
         /*if(errors.hasErrors()){
             return "orderForm";
         }*/
-        order.setUser(user);
+        //order.setUser(user);
         orderRepository.save(order);
         sessionStatus.setComplete();
         logger.info("Order submitted:" + order);
         return "redirect:/";
     }
+
+ 
 
     @GetMapping
     public String ordersForUser(@AuthenticationPrincipal User user, Model model){

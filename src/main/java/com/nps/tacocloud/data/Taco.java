@@ -21,12 +21,7 @@ public class Taco {
     private Integer id;
 
     private Date crtAt;
-
-    @PrePersist
-    private void crtAt(){
-        this.crtAt = new Date();
-    }
-
+    
     @NotNull
     @Size(min = 5, message = "Name must be at least 5 characters long")
     private String name;

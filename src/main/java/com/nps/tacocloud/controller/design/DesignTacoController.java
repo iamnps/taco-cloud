@@ -92,7 +92,8 @@ public class DesignTacoController {
     @GetMapping("/recent")
     public Iterable<Taco> recentTacos(){
         PageRequest page = PageRequest.of(1, 12, Sort.by("creatAt").descending());
-        return tacoARepository.findAll(page);
+        //return tacoARepository.findAll(page);
+        return null;
     }
 
     @GetMapping("/{id}")

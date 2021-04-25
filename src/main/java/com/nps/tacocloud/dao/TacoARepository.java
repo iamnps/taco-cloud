@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface TacoARepository extends CrudRepository<Taco, Integer> {
 
 
-    Iterable<Taco> findAll(PageRequest pageRequest);
+    // Iterable<Taco> findAll(PageRequest pageRequest);
 
     Optional<Taco> findById(Long id);
 }

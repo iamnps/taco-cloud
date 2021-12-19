@@ -1,6 +1,5 @@
-package com.nps.tacocloud.controller.order;
+package com.nps.tacocloud.web;
 
-import com.nps.tacocloud.dao.OrderARepository;
 import com.nps.tacocloud.dao.OrderRepository;
 import com.nps.tacocloud.data.Order;
 import com.nps.tacocloud.data.OrderProps;
@@ -37,14 +36,11 @@ public class OrderController {
 
     private OrderRepository orderRepository;
 
-    private OrderARepository orderARepository;
-
     private OrderProps orderProps;
 
     @Autowired
-    public OrderController(OrderRepository orderRepository, OrderARepository orderARepository, OrderProps orderProps){
-        this.orderRepository = orderRepository;
-        this.orderARepository = orderARepository;
+    public OrderController(OrderRepository orderARepository, OrderProps orderProps){
+        this.orderRepository = orderARepository;
         this.orderProps = orderProps;
     }
 
@@ -66,12 +62,10 @@ public class OrderController {
         return "redirect:/";
     }
 
- 
-
     @GetMapping
     public String ordersForUser(@AuthenticationPrincipal TacoUser user, Model model){
         Pageable pageable = PageRequest.of(0, orderProps.getPageSize());
-        model.addAttribute("orders", orderARepository.findByUserOrderByPlacedAtDesc(user, pageable));
+        model.addAttribute("orders", orderRepository.findByUserOrderByPlacedAtDesc(user, pageable));
 
         return "orderList";
     }

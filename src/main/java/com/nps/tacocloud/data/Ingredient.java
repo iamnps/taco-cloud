@@ -11,13 +11,10 @@ public class Ingredient {
     @Id
     private String id;
     private String name;
-    private Type type;
+    private String type;
 
     public static enum Type{
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE;
-    }
-
-    public Ingredient(String string, String string2, Type valueOf) {
     }
 
     public String getId() {
@@ -36,11 +33,11 @@ public class Ingredient {
         this.name = name;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 

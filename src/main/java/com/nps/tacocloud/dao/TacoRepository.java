@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by peishen.nie on 2020/7/15.
  */
 @Repository
-public interface TacoRepository{
+public interface TacoRepository extends CrudRepository<Taco, Long>{
 
-    Taco save(Taco design);
+    
 }

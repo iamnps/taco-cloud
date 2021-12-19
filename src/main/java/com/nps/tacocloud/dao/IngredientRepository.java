@@ -2,14 +2,13 @@ package com.nps.tacocloud.dao;
 
 import com.nps.tacocloud.data.Ingredient;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  * Created by peishen.nie on 2020/7/15.
  */
-public interface IngredientRepository{
+@Repository
+public interface IngredientRepository extends CrudRepository<Ingredient, String>{
 
-    Iterable<Ingredient> findAll();
-
-    Ingredient findOne(String id);
-
-    Ingredient save(Ingredient ingredient);
 }

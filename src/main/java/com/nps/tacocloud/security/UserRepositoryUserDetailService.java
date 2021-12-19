@@ -1,4 +1,4 @@
-package com.nps.tacocloud.service.impl;
+package com.nps.tacocloud.security;
 
 import com.nps.tacocloud.dao.UserRepository;
 import com.nps.tacocloud.data.TacoUser;

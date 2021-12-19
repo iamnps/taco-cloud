@@ -1,4 +1,4 @@
-package com.nps.tacocloud.controller.web;
+package com.nps.tacocloud.web;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -12,6 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry viewControllerRegistry){
-        viewControllerRegistry.addViewController("/").setViewName("home");
+        viewControllerRegistry.addViewController("/").setViewName("login");
+        viewControllerRegistry.addViewController("/login");
     }
 }

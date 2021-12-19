@@ -1,5 +1,6 @@
 package com.nps.tacocloud.data;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
@@ -18,11 +20,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 public class TacoUser implements UserDetails{
 
+    public TacoUser() {
+
+    }
+
     public TacoUser(String username, String password, String fullname, String street, String city, String state, String zip, String phoneNumber){
         this.setCity(city);
         this.setPassword(password);
         this.setUsername(username);
-        this.setFullName(fullName);
+        this.setFullname(fullname);
         this.setStreet(street);
         this.setState(state);
         this.setZip(zip);
@@ -30,12 +36,12 @@ public class TacoUser implements UserDetails{
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String username;
     private String password;
-    private String fullName;
+    private String fullname;
     private String street;
     private String city;
     private String state;
@@ -60,11 +66,13 @@ public class TacoUser implements UserDetails{
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getFullName() {
-        return fullName;
+
+    public String getFullname() {
+        return fullname;
     }
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
     public String getStreet() {
         return street;
@@ -99,27 +107,27 @@ public class TacoUser implements UserDetails{
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // TODO Auto-generated method stub
-        return null;
+        return Arrays.asList(new SimpleGrantedAuthority("TACO_CUSTOMER_USER"));
     }
     @Override
     public boolean isAccountNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
     @Override
     public boolean isAccountNonLocked() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
     @Override
     public boolean isCredentialsNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
     @Override
     public boolean isEnabled() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     

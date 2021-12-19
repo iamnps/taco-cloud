@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nps.tacocloud.dao.OrderRepository;
 import com.nps.tacocloud.data.Order;
 import com.nps.tacocloud.data.Taco;
-import com.nps.tacocloud.data.User;
+import com.nps.tacocloud.data.TacoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -1,7 +1,6 @@
 package com.nps.tacocloud.dao;
 
 import com.nps.tacocloud.data.Order;
-import com.nps.tacocloud.data.User;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 

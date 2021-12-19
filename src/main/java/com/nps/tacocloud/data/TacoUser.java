@@ -16,9 +16,9 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 
 @Entity
-public class User implements UserDetails{
+public class TacoUser implements UserDetails{
 
-    public User(String username, String password, String fullname, String street, String city, String state, String zip, String phoneNumber){
+    public TacoUser(String username, String password, String fullname, String street, String city, String state, String zip, String phoneNumber){
         this.setCity(city);
         this.setPassword(password);
         this.setUsername(username);

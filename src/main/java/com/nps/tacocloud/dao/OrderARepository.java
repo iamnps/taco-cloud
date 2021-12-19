@@ -1,7 +1,7 @@
 package com.nps.tacocloud.dao;
 
 import com.nps.tacocloud.data.Order;
-import com.nps.tacocloud.data.User;
+import com.nps.tacocloud.data.TacoUser;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface OrderARepository extends CrudRepository<Order, Long> {
 
-    List<Order> findByUserOrderByPlacedAtDesc(User user, Pageable pageable);
+    List<Order> findByUserOrderByPlacedAtDesc(TacoUser user, Pageable pageable);
 
 }
 

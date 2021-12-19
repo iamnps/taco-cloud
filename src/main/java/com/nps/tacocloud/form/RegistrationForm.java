@@ -1,6 +1,6 @@
 package com.nps.tacocloud.form;
 
-import com.nps.tacocloud.data.User;
+import com.nps.tacocloud.data.TacoUser;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
@@ -18,7 +18,7 @@ public class RegistrationForm {
     private String zip;
     private String phone;
 
-    public User toUser(PasswordEncoder passwordEncoder){
-        return new User(username, passwordEncoder.encode(password), fullname, street, city, state, zip, phone);
+    public TacoUser toUser(PasswordEncoder passwordEncoder){
+        return new TacoUser(username, passwordEncoder.encode(password), fullname, street, city, state, zip, phone);
     }
 }

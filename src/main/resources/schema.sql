@@ -44,3 +44,16 @@ CREATE TABLE if NOT EXISTS Taco_Order_Tacos(
 
 ALTER TABLE Taco_Order_Tacos add FOREIGN key (tacoOrder) REFERENCES Taco_Order(id);
 ALTER TABLE Taco_Order_Tacos add FOREIGN key (taco) REFERENCES Taco(id);
+
+DROP TABLE if EXISTS taco_user;
+CREATE TABLE taco_user (  
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    username VARCHAR(128) DEFAULT NULL COMMENT 'username',
+    password VARCHAR(128) DEFAULT NULL COMMENT 'password',
+    fullName VARCHAR(128) DEFAULT NULL COMMENT 'fullName',
+    street VARCHAR(128) DEFAULT NULL COMMENT 'street',
+    city VARCHAR(128) DEFAULT NULL COMMENT 'city',
+    state VARCHAR(16) DEFAULT NULL COMMENT 'state',
+    zip VARCHAR(32) DEFAULT NULL COMMENT 'zip',
+    phone_number VARCHAR(32) DEFAULT NULL COMMENT 'phoneNumber'
+) DEFAULT CHARSET UTF8 COMMENT '';

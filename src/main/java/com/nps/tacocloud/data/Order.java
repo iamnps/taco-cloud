@@ -56,7 +56,7 @@ public class Order implements Serializable{
     }
 
     @ManyToOne
-    private User user;
+    private TacoUser user;
 
     public static long getSerialversionuid() {
         return serialVersionuID;
@@ -150,11 +150,11 @@ public class Order implements Serializable{
         this.tacos = tacos;
     }
 
-    public User getUser() {
+    public TacoUser getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(TacoUser user) {
         this.user = user;
     }
 

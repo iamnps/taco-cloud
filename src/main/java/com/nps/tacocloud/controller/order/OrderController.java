@@ -4,7 +4,8 @@ import com.nps.tacocloud.dao.OrderARepository;
 import com.nps.tacocloud.dao.OrderRepository;
 import com.nps.tacocloud.data.Order;
 import com.nps.tacocloud.data.OrderProps;
-import com.nps.tacocloud.data.User;
+import com.nps.tacocloud.data.TacoUser;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(Order order, Errors errors, SessionStatus sessionStatus, @AuthenticationPrincipal User user){
+    public String processOrder(Order order, Errors errors, SessionStatus sessionStatus, @AuthenticationPrincipal TacoUser user){
         /*if(errors.hasErrors()){
             return "orderForm";
         }*/
@@ -68,7 +69,7 @@ public class OrderController {
  
 
     @GetMapping
-    public String ordersForUser(@AuthenticationPrincipal User user, Model model){
+    public String ordersForUser(@AuthenticationPrincipal TacoUser user, Model model){
         Pageable pageable = PageRequest.of(0, orderProps.getPageSize());
         model.addAttribute("orders", orderARepository.findByUserOrderByPlacedAtDesc(user, pageable));
 

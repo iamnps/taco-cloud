@@ -1,14 +1,15 @@
 package com.nps.tacocloud.web.api;
 
-import com.nps.tacocloud.dao.IngredientRepository;
-import com.nps.tacocloud.dao.OrderRepository;
-import com.nps.tacocloud.dao.TacoRepository;
-import com.nps.tacocloud.dao.UserRepository;
-import com.nps.tacocloud.data.Ingredient;
-import com.nps.tacocloud.data.Order;
-import com.nps.tacocloud.data.Taco;
-import com.nps.tacocloud.data.TacoUser;
 
+
+import com.nps.tacocloud.data.IngredientRepository;
+import com.nps.tacocloud.data.OrderRepository;
+import com.nps.tacocloud.data.TacoRepository;
+import com.nps.tacocloud.data.UserRepository;
+import com.nps.tacocloud.domain.Ingredient;
+import com.nps.tacocloud.domain.Order;
+import com.nps.tacocloud.domain.Taco;
+import com.nps.tacocloud.domain.TacoUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

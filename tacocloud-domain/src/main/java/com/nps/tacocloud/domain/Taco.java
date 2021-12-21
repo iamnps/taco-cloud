@@ -13,6 +13,7 @@ import java.util.List;
  */
 
 @Entity
+@Table(name = "Taco")
 public class Taco {
 
 

@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @Entity
-@Table(name = "Taco_order")
+@Table(name = "Taco_Order")
 public class Order implements Serializable {
 
     private static final long serialVersionuID = 1L;

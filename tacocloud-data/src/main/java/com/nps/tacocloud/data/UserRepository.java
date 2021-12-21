@@ -1,7 +1,6 @@
 package com.nps.tacocloud.data;
 
-import com.nps.tacocloud.data.TacoUser;
-
+import com.nps.tacocloud.domain.TacoUser;
 import org.springframework.data.repository.CrudRepository;
 
 /**

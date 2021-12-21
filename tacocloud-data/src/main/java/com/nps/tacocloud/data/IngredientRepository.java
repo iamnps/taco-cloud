@@ -1,7 +1,6 @@
 package com.nps.tacocloud.data;
 
-import com.nps.tacocloud.data.Ingredient;
-
+import com.nps.tacocloud.domain.Ingredient;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

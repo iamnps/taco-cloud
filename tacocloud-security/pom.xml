@@ -22,7 +22,8 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!-- TacoCloud dependencies -->
+		<dependency>
 			<groupId>sia</groupId>
 			<artifactId>tacocloud-data</artifactId>
 			<version>${tacocloud.version}</version>
@@ -33,19 +34,17 @@
 			<version>${tacocloud.version}</version>
 		</dependency>
 
-        <dependency>
+		<!-- Necessary Boot starters -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-        <dependency>
+		<!-- Test dependencies -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        
     </dependencies>
-
-    
-
 </project>

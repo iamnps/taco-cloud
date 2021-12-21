@@ -1,10 +1,9 @@
 package com.nps.tacocloud.web.api;
 
-import com.nps.tacocloud.dao.OrderRepository;
-import com.nps.tacocloud.data.Order;
-import com.nps.tacocloud.data.OrderProps;
-import com.nps.tacocloud.data.TacoUser;
-
+import com.nps.tacocloud.data.OrderRepository;
+import com.nps.tacocloud.domain.Order;
+import com.nps.tacocloud.domain.TacoUser;
+import com.nps.tacocloud.web.OrderProps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,10 +51,10 @@ public class OrderController {
 
     @PostMapping
     public String processOrder(Order order, Errors errors, SessionStatus sessionStatus, @AuthenticationPrincipal TacoUser user){
-        /*if(errors.hasErrors()){
+        if(errors.hasErrors()){
             return "orderForm";
-        }*/
-        //order.setUser(user);
+        }
+        order.setUser(user);
         orderRepository.save(order);
         sessionStatus.setComplete();
         logger.info("Order submitted:" + order);

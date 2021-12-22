@@ -10,7 +10,7 @@
 6 silly lifecycle taco-web-ui@0.0.0~prebuild: no script for prebuild, continuing
 7 info lifecycle taco-web-ui@0.0.0~build: taco-web-ui@0.0.0
 8 verbose lifecycle taco-web-ui@0.0.0~build: unsafe-perm in lifecycle true
-9 verbose lifecycle taco-web-ui@0.0.0~build: PATH: /Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node/node_modules/npm/bin/node-gyp-bin:/Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node_modules/.bin:/Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/apache-maven-3.8.1/bin:/usr/local/mysql/bin:
+9 verbose lifecycle taco-web-ui@0.0.0~build: PATH: /Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node/node_modules/npm/bin/node-gyp-bin:/Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node_modules/.bin:/Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui/node:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/apache-maven-3.8.1/bin:/usr/local/mysql/bin:/Users/pearsonnie/Documents/product/maven/apache-maven-3.8.4/bin:
 10 verbose lifecycle taco-web-ui@0.0.0~build: CWD: /Users/pearsonnie/Documents/product/taco-cloud/tacocloud-ui
 11 silly lifecycle taco-web-ui@0.0.0~build: Args: [ '-c', 'ng build --dev' ]
 12 silly lifecycle taco-web-ui@0.0.0~build: Returned: code: 1  signal: null

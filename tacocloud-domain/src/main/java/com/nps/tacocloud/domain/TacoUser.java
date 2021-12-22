@@ -18,21 +18,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Table(name = "taco_user")
 public class TacoUser implements UserDetails{
 
-    public TacoUser() {
-
-    }
-
-    public TacoUser(String username, String password, String fullname, String street, String city, String state, String zip, String phoneNumber){
-        this.setCity(city);
-        this.setPassword(password);
-        this.setUsername(username);
-        this.setFullname(fullname);
-        this.setStreet(street);
-        this.setState(state);
-        this.setZip(zip);
-        this.setPhoneNumber(phoneNumber);
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

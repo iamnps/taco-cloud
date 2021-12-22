@@ -16,7 +16,6 @@ import java.util.List;
 @Table(name = "Taco")
 public class Taco {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -29,7 +28,7 @@ public class Taco {
 
     @ManyToMany(targetEntity = Ingredient.class)
     @Size(min = 1, message = "You must choose at least 1 ingredient")
-    private List<String> ingredients;
+    private List<Ingredient> ingredients;
 
     public Integer getId() {
         return id;
@@ -55,11 +54,11 @@ public class Taco {
         this.name = name;
     }
 
-    public List<String> getIngredients() {
+    public List<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
+    public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 

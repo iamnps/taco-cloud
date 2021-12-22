@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by peishen.nie on 2020/7/15.
  */
-@Repository
 public interface OrderRepository extends CrudRepository<Order, Long> {
 
     List<Order> findByUserOrderByPlacedAtDesc(TacoUser user, Pageable pageable);

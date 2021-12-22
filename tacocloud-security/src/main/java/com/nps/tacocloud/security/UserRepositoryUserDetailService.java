@@ -1,7 +1,7 @@
 package com.nps.tacocloud.security;
 
 
-import com.nps.tacocloud.data.UserRepository;
+import com.nps.tacocloud.data.TacoUserRepository;
 import com.nps.tacocloud.domain.TacoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,10 +16,10 @@ import org.springframework.stereotype.Service;
 public class UserRepositoryUserDetailService implements UserDetailsService {
 
     @Autowired
-    private UserRepository repository;
+    private TacoUserRepository repository;
 
     @Autowired
-    public UserRepositoryUserDetailService(UserRepository repository){
+    public UserRepositoryUserDetailService(TacoUserRepository repository){
         this.repository = repository;
     }
 

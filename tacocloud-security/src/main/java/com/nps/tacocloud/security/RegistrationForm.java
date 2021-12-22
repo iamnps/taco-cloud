@@ -82,7 +82,4 @@ public class RegistrationForm {
         this.phone = phone;
     }
 
-    public TacoUser toUser(PasswordEncoder passwordEncoder){
-        return new TacoUser(username, password, fullname, street, city, state, zip, phone);
-    }
 }

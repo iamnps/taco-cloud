@@ -5,7 +5,7 @@ package com.nps.tacocloud.web.api;
 import com.nps.tacocloud.data.IngredientRepository;
 import com.nps.tacocloud.data.OrderRepository;
 import com.nps.tacocloud.data.TacoRepository;
-import com.nps.tacocloud.data.UserRepository;
+import com.nps.tacocloud.data.TacoUserRepository;
 import com.nps.tacocloud.domain.Ingredient;
 import com.nps.tacocloud.domain.Order;
 import com.nps.tacocloud.domain.Taco;
@@ -13,8 +13,13 @@ import com.nps.tacocloud.domain.TacoUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -35,7 +40,7 @@ import java.util.stream.Collectors;
  */
 
 @RestController
-@RequestMapping(value = "/design")
+@RequestMapping(value = "/design", produces = "application/json")
 @SessionAttributes("order")
 @CrossOrigin(origins = "*")
 public class DesignTacoController {
@@ -48,15 +53,15 @@ public class DesignTacoController {
 
     private OrderRepository orderRepository;
 
-    private UserRepository userRepository;
+    private TacoUserRepository tacoUserRepository;
 
     @Autowired
     public DesignTacoController(IngredientRepository ingredientRepository, TacoRepository tacoARepository,
-            OrderRepository orderRepository, UserRepository userRepository) {
+                                OrderRepository orderRepository, TacoUserRepository tacoUserRepository) {
         this.ingredientRepository = ingredientRepository;
         this.tacoRepository = tacoARepository;
         this.orderRepository = orderRepository;
-        this.userRepository = userRepository;
+        this.tacoUserRepository = tacoUserRepository;
     }
 
     @ModelAttribute(name = "order")
@@ -89,7 +94,7 @@ public class DesignTacoController {
 
         model.addAttribute("design", new Taco());
         String username = principal.getName();
-        TacoUser user = userRepository.findByUsername(username);
+        TacoUser user = tacoUserRepository.findByUsername(username);
         model.addAttribute("user", user);
 
         return "design";
@@ -114,10 +119,15 @@ public class DesignTacoController {
     }
 
     @GetMapping("/recent")
-    public Iterable<Taco> recentTacos() {
+    public Resources<TacoResource> recentTacos() {
         PageRequest page = PageRequest.of(1, 12, Sort.by("creatAt").descending());
-        // return tacoARepository.findAll(page);
-        return null;
+        List<Taco> list = tacoRepository.findAll(page).getContent();
+        List<TacoResource> tacoResources = new TacoResourceAssembler().toResources(list);
+        Resources<TacoResource> resources = new Resources<TacoResource>(tacoResources);
+//         resources.add(new Link("http://localhost:8080/design/recent", "recents")); 硬编码
+//        resources.add(ControllerLinkBuilder.linkTo(DesignTacoController.class).slash("recent").withRel("recents")); 还可以再优化
+        resources.add(ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(DesignTacoController.class).recentTacos()).withRel("recents"));
+         return resources;
     }
 
     @GetMapping("/{id}")
@@ -130,8 +140,34 @@ public class DesignTacoController {
     }
 
     @PostMapping(consumes = "application/json")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED) //201表示新增成功
     public Taco postTaco(@RequestBody Taco taco) {
         return tacoRepository.save(taco);
+    }
+
+    @PutMapping("/{orderId}")
+    public Order putOrder(@RequestBody Order order){
+        return orderRepository.save(order);
+    }
+
+    @PatchMapping(path = "/{orderId}", consumes = "application/json")
+    public Order patchOrder(@PathVariable Long orderId, @RequestBody Order patch){
+        Order order = orderRepository.findById(orderId).get();
+        if(null != patch.getZip()){
+            order.setZip(patch.getZip());
+        }
+        if(null != patch.getCcCvv()){
+            order.setCcCvv(patch.getCcCvv());
+        }
+
+        return orderRepository.save(order);
+    }
+
+    @DeleteMapping(path = "/{orderId}")
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    public void deleteOrder(@PathVariable("orderId") Long orderId){
+        try {
+            orderRepository.deleteById(orderId);
+        } catch (EmptyResultDataAccessException e){}
     }
 }

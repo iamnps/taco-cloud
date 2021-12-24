@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tacocloud-kafka" />
         <module name="tacocloud-ui" />
         <module name="tacocloud-security" />
         <module name="tacocloud-api" />
@@ -21,6 +22,7 @@
       <module name="tacocloud-api" target="1.8" />
       <module name="tacocloud-data" target="1.8" />
       <module name="tacocloud-domain" target="1.8" />
+      <module name="tacocloud-kafka" target="8" />
       <module name="tacocloud-security" target="1.8" />
       <module name="tacocloud-ui" target="1.8" />
       <module name="tacocloud-web" target="1.8" />
@@ -32,6 +34,7 @@
       <module name="tacocloud-api" options="-parameters" />
       <module name="tacocloud-data" options="-parameters" />
       <module name="tacocloud-domain" options="-parameters" />
+      <module name="tacocloud-kafka" options="-parameters" />
       <module name="tacocloud-security" options="-parameters" />
       <module name="tacocloud-ui" options="-parameters" />
       <module name="tacocloud-web" options="-parameters" />

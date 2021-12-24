@@ -14,7 +14,7 @@
   		<version>2.0.4.RELEASE</version>
   		<relativePath/>
   	</parent>
-mm
+
     <properties>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
@@ -28,7 +28,8 @@ mm
       <module>tacocloud-domain</module>
       <module>tacocloud-security</module>
       <module>tacocloud-web</module>
-<!--      <module>tacocloud-ui</module>-->
+        <module>tacocloud-kafka</module>
+        <!--      <module>tacocloud-ui</module>-->
     </modules>
 
 </project>

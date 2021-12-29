@@ -1,6 +1,5 @@
 package com.nps.tacocloud.security;
 
-
 import com.nps.tacocloud.data.TacoUserRepository;
 import com.nps.tacocloud.domain.TacoUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserRepositoryUserDetailService implements UserDetailsService {
 
-    @Autowired
     private TacoUserRepository repository;
 
     @Autowired
@@ -29,7 +27,6 @@ public class UserRepositoryUserDetailService implements UserDetailsService {
         if(null != user){
             return user;
         }
-
         throw new UsernameNotFoundException("User '" + username + "' not found.");
     }
 }

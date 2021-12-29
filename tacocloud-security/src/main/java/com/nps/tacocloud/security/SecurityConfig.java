@@ -15,39 +15,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * Created by peishen.nie on 2020/7/22.
  */
-
+@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private UserRepositoryUserDetailService userDetailsService;
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        /*
-         * auth.inMemoryAuthentication().withUser("buzz").password("infinity").
-         * authorities("ROLE_USER")
-         * .and().withUser("woody").password("bullseye").authorities("ROLE_USER");
-         * 
-         * auth.jdbcAuthentication().dataSource(dataSource).
-         * usersByUsernameQuery("select username, password, enabled from Users where username = ?"
-         * )
-         * .authoritiesByUsernameQuery("select username, authority from Users where username = ?"
-         * ).passwordEncoder(new StandardPasswordEncoder("53cr3t"));
-         */
-        /*
-         * auth.ldapAuthentication()
-         * .userSearchBase("ou=people")
-         * .userSearchFilter("uid={0}")
-         * .groupSearchBase("ou=groups")
-         * .groupSearchFilter("member={0}")
-         * .passwordCompare().passwordEncoder(new
-         * BCryptPasswordEncoder()).passwordAttribute("passcode");
-         */
-        // auth.ldapAuthentication().contextSource().root("dc=tacocloud,dc=com").ldif("classpath:users.ldif");
-
-        auth.userDetailsService(userDetailsService);
-    }
+    @Autowired
+    private UserDetailsService userDetailsService;
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
@@ -63,6 +37,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(encoder());
     }
 
 }

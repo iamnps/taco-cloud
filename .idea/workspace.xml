@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="073990c1-914f-403b-b553-f36cf34a163d" name="Default" comment="rest">
-      <change afterPath="$PROJECT_DIR$/tacocloud-kafka/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tacocloud-kafka/src/main/java/com/nps/tacocloud/kafka/KafkaOrderMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tacocloud-kafka/src/main/java/com/nps/tacocloud/kafka/OrderMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocloud-domain/src/main/java/com/nps/tacocloud/domain/TacoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tacocloud-domain/src/main/java/com/nps/tacocloud/domain/TacoUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/UserRepositoryUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tacocloud-security/src/main/java/com/nps/tacocloud/security/UserRepositoryUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tacos/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tacos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tacos/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -422,7 +420,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.run.dashboard.notification" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/tacocloud-ui/node_modules/typescript/lib" />
   </component>
@@ -731,6 +729,10 @@
       <workItem from="1640168279804" duration="1105000" />
       <workItem from="1640173734867" duration="2595000" />
       <workItem from="1640176385989" duration="4794000" />
+      <workItem from="1640311670122" duration="860000" />
+      <workItem from="1640682947448" duration="3058000" />
+      <workItem from="1640771816792" duration="559000" />
+      <workItem from="1640772726673" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1594691978791</created>
@@ -781,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640179066771</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rest">
+      <created>1640311980664</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640311980664</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

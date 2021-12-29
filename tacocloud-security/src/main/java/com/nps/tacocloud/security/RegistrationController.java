@@ -19,6 +19,7 @@ public class RegistrationController {
 
     private TacoUserRepository tacoUserRepository;
 
+    @Autowired
     public RegistrationController(TacoUserRepository tacoUserRepository){
         this.tacoUserRepository = tacoUserRepository;
     }
